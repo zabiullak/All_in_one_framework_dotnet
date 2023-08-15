@@ -2,7 +2,7 @@
 
 <RunSettings>
 	<TestRunParameters>
-		<Parameter name="naukri_url" value="https://www.naukri.com/nlogin/login" />
+		<Parameter name="url" value="https://www.naukri.com/nlogin/login" />
 		<Parameter name="browser" value="chrome" />
 		<Parameter name="type" value="local" />
 		<!--<Parameter name="type" value="remote" />-->
