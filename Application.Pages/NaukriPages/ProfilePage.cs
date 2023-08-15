@@ -1,4 +1,5 @@
 ﻿using Framework.Selenium;
+using Framework.Utils;
 using OpenQA.Selenium;
 
 namespace Application.Pages.NaukriPages
@@ -31,7 +32,8 @@ namespace Application.Pages.NaukriPages
 
         public ProfilePage SendFileLocation()
         {
-            Map.file_AttachCV.SendKeys(@"C:\Users\Mohamad.Khaja\Desktop\Learing\UI_Automation_Nunit\Resources\MohamadZabiulla_SDET_CSharp.pdf");
+            Map.file_AttachCV.SendKeys(FolderUtils.GetResourceFolder()+ "MohamadZabiulla_SDET_CSharp.pdf");
+            Thread.Sleep(10000);
             return this;
         }
     }
@@ -39,6 +41,6 @@ namespace Application.Pages.NaukriPages
     sealed class ProfilePage_Map
     {
         public Element file_AttachCV => Driver.FindElement(By.Id("attachCV"));
-        public Element attachedFile => Driver.FindElement(By.Id("//div[@class='truncate exten']"));
+        public Element attachedFile => Driver.FindElement(By.XPath("//div[@class='truncate exten']"));
     }
 }

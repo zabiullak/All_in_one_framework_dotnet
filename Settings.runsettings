@@ -6,7 +6,7 @@
 		<Parameter name="browser" value="chrome" />
 		<Parameter name="type" value="local" />
 		<!--<Parameter name="type" value="remote" />-->
-		<Parameter name="waitSecond" value="10" />
+		<Parameter name="waitSecond" value="30" />
 
 	</TestRunParameters>
 </RunSettings>

@@ -35,6 +35,5 @@ namespace Framework.Selenium
         {
             return _wait.Until(condition);
         }
-
     }
 }

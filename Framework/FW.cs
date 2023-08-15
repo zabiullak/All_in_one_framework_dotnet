@@ -1,4 +1,5 @@
 ﻿using Framework.Logging;
+using Framework.Utils;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using System;
@@ -12,8 +13,6 @@ namespace Framework
 {
     public class FW
     {
-        public static string WORKSPACE_DIRECTORY = Path.GetFullPath(@"../../../../");
-
         public static Logger Log => _logger ?? throw new NullReferenceException("_logger is null. SetLogger() first.");
 
         [ThreadStatic] public static DirectoryInfo? CurrentTestDirectory;
@@ -21,7 +20,7 @@ namespace Framework
 
         public static DirectoryInfo CreateTestResultDirectory()
         {
-            var testDirectory = WORKSPACE_DIRECTORY + "TestResults";
+            var testDirectory = FolderUtils.WORKSPACE_DIRECTORY + "TestResults";
             if (Directory.Exists(testDirectory))
             {
                 Directory.Delete(testDirectory, recursive: true);
@@ -36,7 +35,7 @@ namespace Framework
         {
             lock (_setLoggerLock)
             {
-                var testResultDir = WORKSPACE_DIRECTORY + "TestResults";
+                var testResultDir = FolderUtils.WORKSPACE_DIRECTORY + "TestResults";
                 var testName = TestContext.CurrentContext.Test.Name.Split('(')[0];
                 var fullPath = $"{testResultDir}/{testName}";
 

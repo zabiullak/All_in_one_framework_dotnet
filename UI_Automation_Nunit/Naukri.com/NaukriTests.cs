@@ -25,7 +25,7 @@ namespace UI_Automation_Nunit.Naukri.com
             LoginNaukriDotCom();
             string fileName = Pages.HomePage.ClickOnViewProfile().SendFileLocation().GetTheUploadedFileName();
 
-            Assert.That(fileName, Is.EqualTo(""), "");
+            Assert.That(fileName, Is.EqualTo("MohamadZabiulla_SDET_CSharp.pdf"), "File was not updated successfully");
         }
     }
 }
