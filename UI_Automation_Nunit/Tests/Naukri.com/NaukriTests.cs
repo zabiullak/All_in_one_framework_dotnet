@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using UI_Automation_Nunit.Base;
 
-namespace UI_Automation_Nunit.Naukri.com
+namespace UI_Automation_Nunit.Tests.Naukri.com
 {
     [TestFixture]
-    internal class NaukriTests: TestBase
+    internal class NaukriTests : TestBase
     {
         [Test]
         public void LoginNaukriDotCom()
