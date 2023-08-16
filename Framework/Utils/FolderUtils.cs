@@ -15,5 +15,9 @@ namespace Framework.Utils
             return WORKSPACE_DIRECTORY + "Resources/";
         }
 
+        public static string GetTestResultFolder()
+        {
+            return WORKSPACE_DIRECTORY + "TestResults/";
+        }
     }
 }

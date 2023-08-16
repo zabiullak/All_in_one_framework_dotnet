@@ -2,8 +2,10 @@
 
 <RunSettings>
 	<TestRunParameters>
+		<Parameter name="Application" value="Naukri.Com" />
 		<Parameter name="url" value="https://www.naukri.com/nlogin/login" />
 		<Parameter name="browser" value="chrome" />
+		<Parameter name="OS" value="windows" />
 		<Parameter name="type" value="local" />
 		<!--<Parameter name="type" value="remote" />-->
 		<Parameter name="waitSecond" value="30" />
