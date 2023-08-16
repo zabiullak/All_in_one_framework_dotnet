@@ -1,4 +1,4 @@
-# UI_Automation using Selenium with CSharp.Net language binding
+# UI_Automation using Selenium with C#.Net language binding
 
 library used in this repo are:
 
