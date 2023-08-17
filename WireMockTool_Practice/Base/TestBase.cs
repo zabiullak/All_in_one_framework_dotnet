@@ -8,6 +8,10 @@ using WireMock.Server;
 
 namespace WireMockTool_Practice.Base
 {
+    /// <summary>
+    ///  blog post : https://www.ontestautomation.com/api-mocking-in-csharp-with-wiremock-net/
+    ///  gitHub: https://github.com/basdijkstra/wiremock-net-examples/tree/main/WireMockNetExamples
+    /// </summary>
     public abstract class TestBase
     {
         public static WireMockServer server;
