@@ -9,6 +9,8 @@
 		<Parameter name="type" value="local" />
 		<!--<Parameter name="type" value="remote" />-->
 		<Parameter name="waitSecond" value="30" />
+		<Parameter name="UserName" value="ENTER_UN" />
+		<Parameter name="Password" value="ENTER_PWD" />
 
 	</TestRunParameters>
 </RunSettings>

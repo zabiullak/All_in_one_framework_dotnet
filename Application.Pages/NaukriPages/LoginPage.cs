@@ -26,8 +26,8 @@ namespace Application.Pages.NaukriPages
 
         public LoginPage LoginWithValidCreds()
         {
-            Map.UN.SendKeys("zabiulla.edu@gmail.com");
-            Map.PWD.SendKeys("naukri123@Zabi");
+            Map.UN.SendKeys(TestContext.Parameters["UserName"]);
+            Map.PWD.SendKeys(TestContext.Parameters["Password"]);
             Map.Btn_Login.Click();
             Driver.Wait.Until(d => d.Title == "Home | Mynaukri");
             return this;
