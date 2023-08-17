@@ -1,0 +1,4 @@
+1. How about parallel testing
+2. Learn Docker and why we need it and implement it
+3. what is Selenium grid ?
+4. shall I combine PlayWright project in this?
