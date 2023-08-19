@@ -128,7 +128,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Navigate to Profile session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 15
- testRunner.And("Upload the Resume", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Upload the Resume file \'MohamadZabiulla_SDET_CSharp.pdf\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
  testRunner.Then("Validate the uploaded resume file name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

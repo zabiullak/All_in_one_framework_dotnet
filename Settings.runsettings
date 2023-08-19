@@ -2,18 +2,18 @@
 
 <RunSettings>
 	<TestRunParameters>
-		<Parameter name="DOCKER_GRID_HUB_URI" value="http://localhost:4444" />
+		<Parameter name="DOCKER_GRID_HUB_URI" value="http://localhost:4444/wd/hub" />
 		<Parameter name="Application" value="Naukri.Com" />
 		<Parameter name="url" value="https://www.naukri.com/nlogin/login" />
 		<Parameter name="browser" value="chrome" />
 		<!--<Parameter name="browser" value="edge" />-->
 		<Parameter name="OS" value="windows" />
-		<!--<Parameter name="type" value="local" />-->
 		<Parameter name="type" value="local" />
-		<Parameter name="headless" value="true" />
+		<!--<Parameter name="type" value="remote" />-->
+		<Parameter name="headless" value="false" />
 		<Parameter name="waitSecond" value="30" />
-		<Parameter name="UserName" value="zabiulla.edu@gmail.com" />
-		<Parameter name="Password" value="naukri123@Zabi" />
+		<Parameter name="UserName" value="UserName" />
+		<Parameter name="Password" value="Password" />
 
 	</TestRunParameters>
 </RunSettings>

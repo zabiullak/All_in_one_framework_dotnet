@@ -92,7 +92,7 @@ namespace Framework.Selenium
                     var chromeOptions = new ChromeOptions
                     {
                         BrowserVersion = "",
-                        PlatformName = "Windows 10",
+                        //PlatformName = "Windows 10",
                     };
 
                     chromeOptions.AddArgument("--start-maximized");
@@ -104,7 +104,7 @@ namespace Framework.Selenium
                     var edgexOptions = new EdgeOptions
                     {
                         BrowserVersion = "",
-                        PlatformName = "Windows 10",
+                        //PlatformName = "Windows 10",
                     };
 
                     driver = new RemoteWebDriver(new Uri(TestContext.Parameters["DOCKER_GRID_HUB_URI"]), edgexOptions.ToCapabilities());

@@ -34,10 +34,10 @@ namespace BDD_with_Specflow.StepDefinition
             Pages.HomePage.ClickOnViewProfile();
         }
 
-        [Then(@"Upload the Resume")]
-        public void ThenUploadTheResume()
+        [Then(@"Upload the Resume file '(.*)'")]
+        public void ThenUploadTheResume(string fileName)
         {
-            Pages.ProfilePage.SendFileLocation();
+            Pages.ProfilePage.UploadNewFileAs(fileName);
         }
 
         [Then(@"Validate the uploaded resume file name")]

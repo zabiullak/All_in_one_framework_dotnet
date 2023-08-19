@@ -12,5 +12,5 @@ Scenario: Valid User able to Login successfully
 Scenario: Valid User able to Upload the Resume successfully
 	Given Login to Naukri profile with valid creds
 	Then  Navigate to Profile session
-	And   Upload the Resume 
+	And   Upload the Resume file 'MohamadZabiulla_SDET_CSharp.pdf'
 	Then  Validate the uploaded resume file name

@@ -52,15 +52,15 @@ namespace Framework.Selenium
         /// <param name="elementName">Name of element for logging purposes.</param>
         public static Element FindElement(By by, [Optional] string eleName)
         {
-            IWebElement element = null;
-            try
-            {
-                element = Wait.Until(drvr => drvr.FindElement(by));
-            }
-            catch(Exception ex)
-            {
-                FW.Log.Error($"While FindElement we received the exeception {ex}");
-            }
+            IWebElement element = Wait.Until(drvr => drvr.FindElement(by));
+            //try
+            //{
+            //    element = Wait.Until(drvr => drvr.FindElement(by));
+            //}
+            //catch(Exception ex)
+            //{
+            //    FW.Log.Error($"While FindElement we received the exeception {ex}");
+            //}
             return new Element(element, eleName)
             {
                 FoundBy = by

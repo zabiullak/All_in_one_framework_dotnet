@@ -12,27 +12,14 @@ namespace Application.Pages.NaukriPages
             Map = new ProfilePage_Map();
         }
 
-        //public ProfilePage ClickOnAttachCV()
-        //{
-        //    //Map.file_AttachCV.Click();
-        //    //Thread.Sleep(5000);
-        //    return this;
-        //}
-
-        //public ProfilePage EnterFileLocationAndOpen()
-        //{
-        //    Map.file_AttachCV.SendKeys(@"C:\Users\Mohamad.Khaja\Desktop\Learing\UI_Automation_Nunit\Resources\MohamadZabiulla_SDET_CSharp.pdf");
-        //    return this;
-        //}
-
         public string GetTheUploadedFileName()
         {
             return Map.attachedFile.Text;
         }
 
-        public ProfilePage SendFileLocation()
+        public ProfilePage UploadNewFileAs(string fileName)
         {
-            Map.file_AttachCV.SendKeys(FolderUtils.GetResourceFolder()+ "MohamadZabiulla_SDET_CSharp.pdf");
+            Map.file_AttachCV.SendKeys(FolderUtils.GetResourceFolder()+ fileName);
             Thread.Sleep(10000);
             return this;
         }

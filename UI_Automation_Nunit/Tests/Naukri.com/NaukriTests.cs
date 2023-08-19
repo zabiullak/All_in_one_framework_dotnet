@@ -12,6 +12,7 @@ namespace UI_Automation_Nunit.Tests.Naukri.com
     internal class NaukriTests : TestBase
     {
         [Test]
+        [Parallelizable]
         public void LoginNaukriDotCom()
         {
             string title = Pages.NavigateToNaukri().LoginWithValidCreds().GetTheTitleOfThePage();
@@ -20,10 +21,11 @@ namespace UI_Automation_Nunit.Tests.Naukri.com
         }
 
         [Test]
+        [Parallelizable]
         public void UploadUpdatedResume()
         {
             LoginNaukriDotCom();
-            string fileName = Pages.HomePage.ClickOnViewProfile().SendFileLocation().GetTheUploadedFileName();
+            string fileName = Pages.HomePage.ClickOnViewProfile().UploadNewFileAs("MohamadZabiulla_SDET_CSharp.pdf").GetTheUploadedFileName();
 
             Assert.That(fileName, Is.EqualTo("MohamadZabiulla_SDET_CSharp.pdf"), "File was not updated successfully");
         }
