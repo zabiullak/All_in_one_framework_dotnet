@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BDD_with_Specflow", "BDD_wi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WireMockTool_Practice", "WireMockTool_Practice\WireMockTool_Practice.csproj", "{62670CBC-0E33-40AC-AECC-273299243E09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Automation_NUnitTests", "API_Automation_NUnitTests\API_Automation_NUnitTests.csproj", "{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{62670CBC-0E33-40AC-AECC-273299243E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62670CBC-0E33-40AC-AECC-273299243E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62670CBC-0E33-40AC-AECC-273299243E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
