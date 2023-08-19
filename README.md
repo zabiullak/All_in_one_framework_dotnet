@@ -11,7 +11,7 @@ This repo supports:
     * supports running tests in cross browser. (update browser detail in .runsetting file)
     * supports runnig tests in same browsers.
         - Spin up the Docker file by triggering the 'SeleniumGrid_DockerUp.bat' (update type = remote in .runsetting file)
-    * Also Selenium Grid Standa alone .jar is added to run the Parallel tests within local machine itself for that trigger 'SeleniumGrid_Standalone.bat'
+    * Selenium Grid Stand Alone .jar is added to run the Parallel tests within local machine itself for that run 'SeleniumGrid_Standalone.bat' file
 2. Screenshot image of failed tests.
 3. proper Log message to debug the failures.
 4. Extent HTML report for 
