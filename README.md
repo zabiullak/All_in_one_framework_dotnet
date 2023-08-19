@@ -7,8 +7,13 @@ library used in this repo are:
 
 This repo supports:
 
-1. Screenshot image of failed tests.
-2. proper Log message to debug the failures.
+1. Parallel testing 
+    * supports running tests in cross browser. (update browser detail in .runsetting file)
+    * supports runnig tests in same browsers.
+    - Spin up the Docker file by triggering the 'SeleniumGrid_DockerUp.bat' (update type = remote in .runsetting file)
+2. Screenshot image of failed tests.
+3. proper Log message to debug the failures.
+4. Extent HTML report for BDD project
 
 Additional Info: 
 
