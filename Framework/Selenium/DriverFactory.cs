@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,10 @@ namespace Framework.Selenium
             chrome_options.AddArgument("no-sandbox");
             chrome_options.AddArguments("enable-features=NetworkServiceInProcess");
             chrome_options.AddArguments("disable-features=NetworkService");
+            if (TestContext.Parameters["headless"].ToLower() == "true" || TestContext.Parameters["headless"].ToLower() == "yes")
+            {
+                chrome_options.AddArgument("--headless=new");
+            }
             return chrome_options;
         }
 
@@ -69,6 +74,10 @@ namespace Framework.Selenium
             edge_options.AddArgument("no-sandbox");
             edge_options.AddArguments("enable-features=NetworkServiceInProcess");
             edge_options.AddArguments("disable-features=NetworkService");
+            if (TestContext.Parameters["headless"].ToLower() == "true" || TestContext.Parameters["headless"].ToLower() == "yes")
+            {
+                edge_options.AddArgument("--headless=new");
+            }
             return edge_options;
         }
 
@@ -83,7 +92,7 @@ namespace Framework.Selenium
                     var chromeOptions = new ChromeOptions
                     {
                         BrowserVersion = "",
-                        PlatformName = "LINUX",
+                        PlatformName = "Windows 10",
                     };
 
                     chromeOptions.AddArgument("--start-maximized");
@@ -95,7 +104,7 @@ namespace Framework.Selenium
                     var edgexOptions = new EdgeOptions
                     {
                         BrowserVersion = "",
-                        PlatformName = "Windows 11",
+                        PlatformName = "Windows 10",
                     };
 
                     driver = new RemoteWebDriver(new Uri(TestContext.Parameters["DOCKER_GRID_HUB_URI"]), edgexOptions.ToCapabilities());
