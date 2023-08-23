@@ -53,6 +53,7 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     testFiltercriteria: 'TestCategory=Login'
     uiTests: true
+    runSettingsFile: 'Settings.runsettings'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
