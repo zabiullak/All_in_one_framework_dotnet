@@ -12,8 +12,8 @@
 		<!--<Parameter name="type" value="remote" />-->
 		<Parameter name="headless" value="false" />
 		<Parameter name="waitSecond" value="30" />
-		<Parameter name="UserName" value="UserName" />
-		<Parameter name="Password" value="Password" />
+		<Parameter name="UserName" value="zabiulla.edu@gmail.com" />
+		<Parameter name="Password" value="naukri123@Zabi" />
 
 	</TestRunParameters>
 </RunSettings>

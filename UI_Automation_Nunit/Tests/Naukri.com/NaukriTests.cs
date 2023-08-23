@@ -1,4 +1,5 @@
 ﻿using Application.Pages;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace UI_Automation_Nunit.Tests.Naukri.com
     [TestFixture]
     internal class NaukriTests : TestBase
     {
-        [Test]
+        [TestCase(Category ="Login")]
         [Parallelizable]
         public void LoginNaukriDotCom()
         {
@@ -20,7 +21,7 @@ namespace UI_Automation_Nunit.Tests.Naukri.com
             Assert.That(title, Is.EqualTo("Home | Mynaukri"), "User not landed on Home Page");
         }
 
-        [Test]
+        [TestCase(Category = "ResumeUpload")]
         [Parallelizable]
         public void UploadUpdatedResume()
         {
