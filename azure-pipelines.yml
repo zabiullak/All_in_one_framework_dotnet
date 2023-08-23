@@ -44,6 +44,8 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
+      **\bin\**\*Application.Pages.dll
+      **\bin\**\*AFramework.dll
       **\bin\**\*BDD_with_Specflow.dll
       **\bin\**\*UI_Automation_NUnitTests.dll
       **\bin\**\*API_Automation_NUnitTests.dll
