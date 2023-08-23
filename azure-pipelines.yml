@@ -51,6 +51,7 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     uiTests: true
     runSettingsFile: 'Settings.runsettings'
+    overrideTestrunParameters: '-Password $(PASSWORD) -UserName $(USERNAME)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
