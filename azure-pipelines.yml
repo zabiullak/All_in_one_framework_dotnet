@@ -49,7 +49,6 @@ steps:
       **\bin\**\*API_Automation_NUnitTests.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    testFiltercriteria: 'TestCategory=Login'
     uiTests: true
     runSettingsFile: 'Settings.runsettings'
     platform: '$(buildPlatform)'
