@@ -44,8 +44,10 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\bin\**\*test.dll
-      **\bin\**\*tests.dll
+      **\bin\**\*BDD_with_Specflow.dll
+      **\bin\**\*UI_Automation_NUnitTests.dll
+      **\bin\**\*API_Automation_NUnitTests.dll
+      !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     testFiltercriteria: 'TestCategory=Login'
     uiTests: true
