@@ -46,7 +46,6 @@ steps:
     testAssemblyVer2: |
       **\bin\**\*BDD_with_Specflow.dll
       **\bin\**\*UI_Automation_Selenium.dll
-      **\bin\**\*UI_Automation_Playwright.dll
       **\bin\**\*API_Automation_RestSharp.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
