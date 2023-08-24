@@ -21,13 +21,14 @@ namespace Framework
         [ThreadStatic] public static DirectoryInfo? CurrentTestDirectory;
         [ThreadStatic] public static Logger? _logger;
 
-        public static void CreateTestResultDirectory()
+        public static DirectoryInfo CreateTestResultDirectory()
         {
             var testDirectory = FolderUtils.WORKSPACE_DIRECTORY + "TestResults";
-            if (!Directory.Exists(testDirectory))
+            if (Directory.Exists(testDirectory))
             {
-                Directory.CreateDirectory(testDirectory);
+                Directory.Delete(testDirectory, recursive: true);
             }
+            return Directory.CreateDirectory(testDirectory);
         }
 
         private static object _setLoggerLock = new object();
@@ -38,32 +39,18 @@ namespace Framework
         //    {
         //        var testResultDir = FolderUtils.WORKSPACE_DIRECTORY + "TestResults";
         //        var testName = TestContext.CurrentContext.Test.Name.Split('(')[0];
-        //        if (testName != "[default namespace]")
+        //        var fullPath = $"{testResultDir}/{testName}";
+
+        //        if (Directory.Exists(fullPath))
         //        {
-        //            var fullPath = $"{testResultDir}/{testName}";
-        //            if (Directory.Exists(fullPath))
-        //            {
-        //                CurrentTestDirectory = Directory.CreateDirectory(fullPath + TestContext.CurrentContext.Test.ID);
-        //            }
-        //            else
-        //            {
-        //                CurrentTestDirectory = Directory.CreateDirectory(fullPath);
-        //            }
-        //            _logger = new Logger(testName, CurrentTestDirectory.FullName + "/log.txt");
+        //            CurrentTestDirectory = Directory.CreateDirectory(fullPath + TestContext.CurrentContext.Test.ID);
         //        }
         //        else
         //        {
-        //            var fullPath = $"{testResultDir}/SpecFlowResults/{Helper.GetCurrentDate()}";
-        //            if (Directory.Exists(fullPath))
-        //            {
-        //                CurrentTestDirectory = Directory.CreateDirectory(fullPath + TestContext.CurrentContext.Test.ID);
-        //            }
-        //            else
-        //            {
-        //                CurrentTestDirectory = Directory.CreateDirectory(fullPath);
-        //            }
-        //            _logger = new Logger(testName, CurrentTestDirectory.FullName + "/log.txt");
+        //            CurrentTestDirectory = Directory.CreateDirectory(fullPath);
         //        }
+
+        //        _logger = new Logger(testName, CurrentTestDirectory.FullName + "/log.txt");
         //    }
         //}
 
@@ -74,10 +61,9 @@ namespace Framework
                 //LoggingLevelSwitch levelSwitch = new LoggingLevelSwitch(LogEventLevel.Debug);
                 Log.Logger = new LoggerConfiguration()
                     .MinimumLevel.Debug()
-                    .WriteTo.File(FolderUtils.WORKSPACE_DIRECTORY + $"TestResults/{Helper.GetDateValue(0).ToString("d_MM_yyyy")}/log.txt",
+                    .WriteTo.File(FolderUtils.GetTestResultFolder() + $"{Helper.GetDateValue(0).ToString("d_MM_yyyy")}/log.txt",
                     outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
                     rollingInterval: RollingInterval.Day).CreateLogger();
-
             }
         }
     }

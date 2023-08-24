@@ -1,0 +1,5 @@
+// to install latest pwsh
+dotnet tool install --global PowerShell
+
+// to download chromium, firfox, edge., 
+pwsh bin/Debug/net6.0/playwright.ps1 install

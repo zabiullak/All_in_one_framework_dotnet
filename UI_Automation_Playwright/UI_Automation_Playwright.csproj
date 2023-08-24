@@ -20,4 +20,8 @@
 	<PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Application.Pages\Application.Pages.csproj" />
+  </ItemGroup>
+
 </Project>
