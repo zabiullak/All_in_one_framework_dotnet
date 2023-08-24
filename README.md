@@ -1,4 +1,7 @@
-# UI_Automation using Selenium with C#.Net language binding
+# UI Automation using Selenium with C#.Net
+# UI Automation using Playwright tool
+# API Automation using RestSharp
+# Mocking and Stubbing using WireMock.Net
 
 **List of libraries used in this repo:**
 
