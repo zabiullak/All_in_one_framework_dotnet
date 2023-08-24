@@ -19,5 +19,6 @@ namespace Framework.Utils
         {
             return WORKSPACE_DIRECTORY + "TestResults/";
         }
+
     }
 }

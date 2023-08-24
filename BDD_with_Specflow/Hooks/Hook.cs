@@ -81,6 +81,9 @@ namespace BDD_with_Specflow.Hooks
             {
                 driver.Quit();
             }
+
+            // Finally, once just before the application exits...
+            Log.CloseAndFlush();
         }
 
         [AfterStep]

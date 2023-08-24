@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FluentDateTime;
+using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +10,12 @@ namespace Framework.Utils
 {
     public static class Helper
     {
-        public static string GetCurrentDate()
+        public static DateTime GetDateValue(int addDays)
         {
-            return DateTime.UtcNow.ToString("g").Replace(" ", "_").Replace("/", "_").Replace(":", "_");
+            DateTime timeUtc = DateTime.UtcNow;
+            TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("Central Standard Time");
+            DateTime cstTime = TimeZoneInfo.ConvertTimeFromUtc(timeUtc, cstZone);
+            return cstTime.AddBusinessDays(addDays);
         }
     }
 }

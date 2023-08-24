@@ -46,6 +46,9 @@ namespace UI_Automation_Nunit.Base
                 Log.Warning("Outcome: " + outcome);
             }
             Driver.Quit();
+
+            // Finally, once just before the application exits...
+            Log.CloseAndFlush();
         }
     }
 }

@@ -16,20 +16,18 @@ namespace Framework
 {
     public class FW
     {
-        public static Logger Log => _logger ?? throw new NullReferenceException("_logger is null. SetLogger() first.");
+        //public static Logger Log => _logger ?? throw new NullReferenceException("_logger is null. SetLogger() first.");
 
         [ThreadStatic] public static DirectoryInfo? CurrentTestDirectory;
         [ThreadStatic] public static Logger? _logger;
 
-        public static DirectoryInfo CreateTestResultDirectory()
+        public static void CreateTestResultDirectory()
         {
             var testDirectory = FolderUtils.WORKSPACE_DIRECTORY + "TestResults";
-            if (Directory.Exists(testDirectory))
+            if (!Directory.Exists(testDirectory))
             {
-                Directory.Delete(testDirectory, recursive: true);
+                Directory.CreateDirectory(testDirectory);
             }
-
-            return Directory.CreateDirectory(testDirectory);
         }
 
         private static object _setLoggerLock = new object();
@@ -43,7 +41,6 @@ namespace Framework
         //        if (testName != "[default namespace]")
         //        {
         //            var fullPath = $"{testResultDir}/{testName}";
-
         //            if (Directory.Exists(fullPath))
         //            {
         //                CurrentTestDirectory = Directory.CreateDirectory(fullPath + TestContext.CurrentContext.Test.ID);
@@ -52,13 +49,11 @@ namespace Framework
         //            {
         //                CurrentTestDirectory = Directory.CreateDirectory(fullPath);
         //            }
-
         //            _logger = new Logger(testName, CurrentTestDirectory.FullName + "/log.txt");
         //        }
         //        else
         //        {
         //            var fullPath = $"{testResultDir}/SpecFlowResults/{Helper.GetCurrentDate()}";
-
         //            if (Directory.Exists(fullPath))
         //            {
         //                CurrentTestDirectory = Directory.CreateDirectory(fullPath + TestContext.CurrentContext.Test.ID);
@@ -67,7 +62,6 @@ namespace Framework
         //            {
         //                CurrentTestDirectory = Directory.CreateDirectory(fullPath);
         //            }
-
         //            _logger = new Logger(testName, CurrentTestDirectory.FullName + "/log.txt");
         //        }
         //    }
@@ -75,12 +69,16 @@ namespace Framework
 
         public static void SetLogger()
         {
-            LoggingLevelSwitch levelSwitch = new LoggingLevelSwitch(LogEventLevel.Debug);
-            Serilog.Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.ControlledBy(levelSwitch)
-                .WriteTo.File(FolderUtils.WORKSPACE_DIRECTORY + @"TestResults\SpecFlowResults\Logs",
-                outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} | {Level:u3} | {Message} {NewLine}",
-                rollingInterval: RollingInterval.Day).CreateLogger();
+            lock (_setLoggerLock)
+            {
+                //LoggingLevelSwitch levelSwitch = new LoggingLevelSwitch(LogEventLevel.Debug);
+                Log.Logger = new LoggerConfiguration()
+                    .MinimumLevel.Debug()
+                    .WriteTo.File(FolderUtils.WORKSPACE_DIRECTORY + $"TestResults/{Helper.GetDateValue(0).ToString("d_MM_yyyy")}/log.txt",
+                    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
+                    rollingInterval: RollingInterval.Day).CreateLogger();
+
+            }
         }
     }
 }

@@ -38,7 +38,7 @@ namespace BDD_with_Specflow.StepDefinition
         [Then(@"Validate that User succussfully landed to home screen")]
         public void ThenValidateThatUserSuccussfullyLandedToHomeScreen()
         {
-            Assert.That(driver.Title, Is.EqualTo("ParaBank || Accounts Overview"), "User not logged in successfully");
+            Assert.That(driver.Title, Is.EqualTo("ParaBank | Accounts Overview"), "User not logged in successfully");
         }
 
     }
