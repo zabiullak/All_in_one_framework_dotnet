@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API_Automation_NUnitTests.Base
+namespace API_Automation_RestSharp.Base
 {
     public abstract class TestBase
     {

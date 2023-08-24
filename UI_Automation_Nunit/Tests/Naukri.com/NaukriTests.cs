@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UI_Automation_Nunit.Base;
+using UI_Automation_Selenium.Base;
 
-namespace UI_Automation_Nunit.Tests.Naukri.com
+namespace UI_Automation_Selenium.Tests.Naukri.com
 {
     [TestFixture]
     internal class NaukriTests : TestBase

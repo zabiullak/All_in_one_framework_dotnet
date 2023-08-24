@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UI_Automation_Nunit.Base
+namespace UI_Automation_Selenium.Base
 {
     public abstract class TestBase
     {
