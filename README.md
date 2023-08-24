@@ -1,6 +1,6 @@
 # UI_Automation using Selenium with C#.Net language binding
 
-List of libraries used in this repo:
+**List of libraries used in this repo:**
 
 1. Nunit
 2. Selenium.WebDriver
@@ -10,7 +10,7 @@ List of libraries used in this repo:
 6. ExtentReport
 7. SeriLog
 
-This repo supports the following:
+**This repo supports the following:**
 
 1. Parallel testing 
     * supports running tests in cross-browser. (update browser detail in .runsetting file)
@@ -21,7 +21,7 @@ This repo supports the following:
 3. Proper log message to debug the failures.
 4. Extent HTML report to view BDD - Specflow Scenario results.
 
-Additional Info: 
+_Additional Info:_ 
 
 1. for Parallel Execution of Nunit tests add [Parallelizable] tag to the respective tests and trigger via cmd / using IDE
 2. The proper POM is followed and #CleanCode is taken care
