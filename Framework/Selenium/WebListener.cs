@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Events;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,57 +39,57 @@ namespace Framework.Selenium
 
         private void WhenExceptionThrown(object sender, WebDriverExceptionEventArgs e)
         {
-            //FW.Log.Info();
+            //Log.Information();
         }
 
         private void WhenElementIsClicked(object sender, WebElementEventArgs e)
         {
-            FW.Log.Info("Clicked element");
+            Log.Information("Clicked element");
         }
 
         private void AfterElementIsFound(object sender, FindElementEventArgs e)
         {
-            FW.Log.Info("Found Element " + e.FindMethod.ToString());
+            Log.Information("Found Element " + e.FindMethod.ToString());
         }
 
         private void WhenClickingElement(object sender, WebElementEventArgs e)
         {
-            FW.Log.Info("Clicking element");
+            Log.Information("Clicking element");
         }
 
         private void WhenFindingElement(object sender, FindElementEventArgs e)
         {
-            // FW.Log.Info();
+            // Log.Information();
         }
 
         private void AfterNavigatedForward(object sender, WebDriverNavigationEventArgs e)
         {
-            FW.Log.Info("Navigated forward");
+            Log.Information("Navigated forward");
         }
 
         private void WhenNavigatingForward(object sender, WebDriverNavigationEventArgs e)
         {
-            //FW.Log.Info("Navigating forward");
+            //Log.Information("Navigating forward");
         }
 
         private void AfterNavigatedBack(object sender, WebDriverNavigationEventArgs e)
         {
-            FW.Log.Info("Navigated back");
+            Log.Information("Navigated back");
         }
 
         private void WhenNavigatingBack(object sender, WebDriverNavigationEventArgs e)
         {
-            //FW.Log.Info("Navigating back");
+            //Log.Information("Navigating back");
         }
 
         private void AfterNavigation(object sender, WebDriverNavigationEventArgs e)
         {
-            FW.Log.Info("Navigated to url " + e.Url);
+            Log.Information("Navigated to url " + e.Url);
         }
 
         private void WhenNavigating(object sender, WebDriverNavigationEventArgs e)
         {
-            //FW.Log.Info("Navigating to url " + e.Url);
+            //Log.Information("Navigating to url " + e.Url);
         }
     }
 }

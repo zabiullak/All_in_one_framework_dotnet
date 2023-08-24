@@ -5,13 +5,18 @@ using BDD_with_Specflow.Utils;
 using BoDi;
 using Framework;
 using Framework.Selenium;
+using Framework.Utils;
 using OpenQA.Selenium;
+using Serilog;
+using Serilog.Core;
+using Serilog.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+
 
 namespace BDD_with_Specflow.Hooks
 {
@@ -30,34 +35,34 @@ namespace BDD_with_Specflow.Hooks
         {
             FW.CreateTestResultDirectory();
             FW.SetLogger();
-            FW.Log.Info("Running before test run...");
+            Log.Information("Running before test run...");
             ExtentReportInit();
         }
 
         [AfterTestRun]
         public static void AfterTestRun()
         {
-            FW.Log.Info("Running after test run...");
+            Log.Information("Running after test run...");
             ExtentReportTearDown();
         }
 
         [BeforeFeature]
         public static void BeforeFeature(FeatureContext featureContext)
         {
-            FW.Log.Info("Running before feature...");
+            Log.Information($"Running before feature...{featureContext.FeatureInfo.Title}");
             _feature = _extentReports.CreateTest<Feature>(featureContext.FeatureInfo.Title);
         }
 
         [AfterFeature]
         public static void AfterFeature()
         {
-            FW.Log.Info("Running after feature...");
+            Log.Information("Running after feature...");
         }
 
         [BeforeScenario(Order = 0)]
         public void FirstBeforeScenario(ScenarioContext scenarioContext)
         {
-            FW.Log.Info("Running before scenario...");
+            Log.Information($"Running before scenario...{scenarioContext.ScenarioInfo.Title}");
             Driver.Init();
             Pages.Init();
 
@@ -69,22 +74,25 @@ namespace BDD_with_Specflow.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            FW.Log.Info("Running after scenario...");
+            Log.Information("Running after scenario...");
             var driver = _container.Resolve<IWebDriver>();
 
             if (driver != null)
             {
                 driver.Quit();
             }
+
+            // Finally, once just before the application exits...
+            Log.CloseAndFlush();
         }
 
         [AfterStep]
         public void AfterStep(ScenarioContext scenarioContext)
         {
-            FW.Log.Info("Running after step....");
+            Log.Information("Running after step....");
             string stepType = scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
             string stepName = scenarioContext.StepContext.StepInfo.Text;
-
+                        
             var driver = _container.Resolve<IWebDriver>();
 
             //When scenario passed
@@ -111,7 +119,7 @@ namespace BDD_with_Specflow.Hooks
             //When scenario fails
             if (scenarioContext.TestError != null)
             {
-
+                Log.Error("Test Step Failed | " + scenarioContext.TestError.Message);
                 if (stepType == "Given")
                 {
                     _scenario.CreateNode<Given>(stepName).Fail(scenarioContext.TestError.Message,

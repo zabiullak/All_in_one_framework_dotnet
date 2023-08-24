@@ -23,10 +23,10 @@ namespace BDD_with_Specflow.Utils
 
         public static void ExtentReportInit()
         {
-            var htmlReporter = new ExtentHtmlReporter(FolderUtils.GetTestResultFolder());
+            var htmlReporter = new ExtentHtmlReporter(FolderUtils.GetTestResultFolder()+ $"{Helper.GetDateValue(0).ToString("d_MM_yyyy")}/");
             htmlReporter.Config.ReportName = "Automation UI testing Report";
             htmlReporter.Config.DocumentTitle = "Automation Status Report";
-            htmlReporter.Config.Theme = Theme.Standard;
+            htmlReporter.Config.Theme = Theme.Dark;
             htmlReporter.Start();
 
             _extentReports = new ExtentReports();
@@ -45,7 +45,7 @@ namespace BDD_with_Specflow.Utils
         {
             ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
             Screenshot screenshot = takesScreenshot.GetScreenshot();
-            string screenshotLocation = Path.Combine(FolderUtils.GetTestResultFolder(), scenarioContext.ScenarioInfo.Title + ".png");
+            string screenshotLocation = Path.Combine(FolderUtils.GetTestResultFolder() + Helper.GetDateValue(0).ToString("d_MM_yyyy"), scenarioContext.ScenarioInfo.Title + ".png");
             screenshot.SaveAsFile(screenshotLocation, ScreenshotImageFormat.Png);
             return screenshotLocation;
         }

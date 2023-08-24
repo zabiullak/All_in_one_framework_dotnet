@@ -1,12 +1,14 @@
 ﻿using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium;
 using System;
+using Serilog;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium.DevTools;
 
 namespace Framework.Selenium
 {
@@ -47,7 +49,7 @@ namespace Framework.Selenium
 
         public void Click()
         {
-            FW.Log.Step($"Click {Name}");
+            Serilog.Log.Debug($"Click {Name}");
             Current.Click();
             //Driver.WaitForPageToLoad();
         }

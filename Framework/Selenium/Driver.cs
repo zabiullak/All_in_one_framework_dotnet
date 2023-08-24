@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace Framework.Selenium
             {
                 url = $"http://{url}";
             }
-            //FW.Log.Info(url);
+            //Log.Information(url);
             Current.Navigate().GoToUrl(url);
         }
 
@@ -129,7 +130,7 @@ namespace Framework.Selenium
 
         public static void Quit()
         {
-            FW.Log.Info("Close Browser");
+            Log.Information("Close Browser");
             Current.Quit();
         }
 

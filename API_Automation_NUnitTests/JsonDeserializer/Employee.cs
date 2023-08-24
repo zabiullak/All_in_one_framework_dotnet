@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API_Automation_NUnitTests.JsonDeserializer
+namespace API_Automation_RestSharp.JsonDeserializer
 {
     public class Employee
     {

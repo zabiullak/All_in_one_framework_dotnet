@@ -8,7 +8,7 @@ Scenario: Valid User able to Login successfully
 	Then  Validate Title of the Page
 
 
-@FileUpload
+@FileUpload 
 Scenario: Valid User able to Upload the Resume successfully
 	Given Login to Naukri profile with valid creds
 	Then  Navigate to Profile session

@@ -1,5 +1,5 @@
-﻿using API_Automation_NUnitTests.Base;
-using API_Automation_NUnitTests.JsonDeserializer;
+﻿using API_Automation_RestSharp.Base;
+using API_Automation_RestSharp.JsonDeserializer;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -10,7 +10,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace API_Automation_NUnitTests.Tests
+namespace API_Automation_RestSharp.Tests
 {
     [TestFixture]
     public class ReqResponseDotcomTests : TestBase
