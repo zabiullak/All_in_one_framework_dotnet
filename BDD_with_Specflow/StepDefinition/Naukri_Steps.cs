@@ -22,7 +22,7 @@ namespace BDD_with_Specflow.StepDefinition
         public void GivenLoginToNaukriProfileWithValidCreds()
         {
             //driver.Navigate().GoToUrl(TestContext.Parameters["url"]);
-            //FW.Log.Info($"Landed on Url -> {TestContext.Parameters["url"]}");
+            //Log.Information($"Landed on Url -> {TestContext.Parameters["url"]}");
 
             Pages.NavigateToNaukri().LoginWithValidCreds();
 

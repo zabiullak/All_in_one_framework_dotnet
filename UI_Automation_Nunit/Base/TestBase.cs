@@ -2,6 +2,7 @@
 using Framework;
 using Framework.Selenium;
 using NUnit.Framework.Interfaces;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,16 +34,16 @@ namespace UI_Automation_Nunit.Base
 
             if (outcome == TestStatus.Passed)
             {
-                FW.Log.Info("Outcome: Passed");
+                Log.Information("Outcome: Passed");
             }
             else if (outcome == TestStatus.Failed)
             {
                 Driver.TakeScreenShot("test_Failed");
-                FW.Log.Info("Outcome: Failed");
+                Log.Information("Outcome: Failed");
             }
             else
             {
-                FW.Log.Warning("Outcome: " + outcome);
+                Log.Warning("Outcome: " + outcome);
             }
             Driver.Quit();
         }

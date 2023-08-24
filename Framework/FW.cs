@@ -2,6 +2,9 @@
 using Framework.Utils;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
+using Serilog.Core;
+using Serilog.Events;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,25 +34,53 @@ namespace Framework
 
         private static object _setLoggerLock = new object();
 
+        //public static void SetLogger()
+        //{
+        //    lock (_setLoggerLock)
+        //    {
+        //        var testResultDir = FolderUtils.WORKSPACE_DIRECTORY + "TestResults";
+        //        var testName = TestContext.CurrentContext.Test.Name.Split('(')[0];
+        //        if (testName != "[default namespace]")
+        //        {
+        //            var fullPath = $"{testResultDir}/{testName}";
+
+        //            if (Directory.Exists(fullPath))
+        //            {
+        //                CurrentTestDirectory = Directory.CreateDirectory(fullPath + TestContext.CurrentContext.Test.ID);
+        //            }
+        //            else
+        //            {
+        //                CurrentTestDirectory = Directory.CreateDirectory(fullPath);
+        //            }
+
+        //            _logger = new Logger(testName, CurrentTestDirectory.FullName + "/log.txt");
+        //        }
+        //        else
+        //        {
+        //            var fullPath = $"{testResultDir}/SpecFlowResults/{Helper.GetCurrentDate()}";
+
+        //            if (Directory.Exists(fullPath))
+        //            {
+        //                CurrentTestDirectory = Directory.CreateDirectory(fullPath + TestContext.CurrentContext.Test.ID);
+        //            }
+        //            else
+        //            {
+        //                CurrentTestDirectory = Directory.CreateDirectory(fullPath);
+        //            }
+
+        //            _logger = new Logger(testName, CurrentTestDirectory.FullName + "/log.txt");
+        //        }
+        //    }
+        //}
+
         public static void SetLogger()
         {
-            lock (_setLoggerLock)
-            {
-                var testResultDir = FolderUtils.WORKSPACE_DIRECTORY + "TestResults";
-                var testName = TestContext.CurrentContext.Test.Name.Split('(')[0];
-                var fullPath = $"{testResultDir}/{testName}";
-
-                if (Directory.Exists(fullPath))
-                {
-                    CurrentTestDirectory = Directory.CreateDirectory(fullPath + TestContext.CurrentContext.Test.ID);
-                }
-                else
-                {
-                    CurrentTestDirectory = Directory.CreateDirectory(fullPath);
-                }
-
-                _logger = new Logger(testName, CurrentTestDirectory.FullName + "/log.txt");
-            }
+            LoggingLevelSwitch levelSwitch = new LoggingLevelSwitch(LogEventLevel.Debug);
+            Serilog.Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.ControlledBy(levelSwitch)
+                .WriteTo.File(FolderUtils.WORKSPACE_DIRECTORY + @"TestResults\SpecFlowResults\Logs",
+                outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} | {Level:u3} | {Message} {NewLine}",
+                rollingInterval: RollingInterval.Day).CreateLogger();
         }
     }
 }

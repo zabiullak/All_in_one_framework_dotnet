@@ -12,13 +12,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Settings.runsettings = Settings.runsettings
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFramework", "Framework\AFramework.csproj", "{E46D3418-EAC8-4A04-8C89-3865EA01B1B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework", "Framework\Framework.csproj", "{E46D3418-EAC8-4A04-8C89-3865EA01B1B3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BDD_with_Specflow", "BDD_with_Specflow\BDD_with_Specflow.csproj", "{33994620-EFCE-4849-9DEE-BC51880FB9B8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WireMockTool_Practice", "WireMockTool_Practice\WireMockTool_Practice.csproj", "{62670CBC-0E33-40AC-AECC-273299243E09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Automation_NUnitTests", "API_Automation_NUnitTests\API_Automation_NUnitTests.csproj", "{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Automation_NUnitTests", "API_Automation_NUnitTests\API_Automation_NUnitTests.csproj", "{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

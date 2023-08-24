@@ -23,7 +23,7 @@ namespace BDD_with_Specflow.Utils
 
         public static void ExtentReportInit()
         {
-            var htmlReporter = new ExtentHtmlReporter(FolderUtils.GetTestResultFolder());
+            var htmlReporter = new ExtentHtmlReporter(FolderUtils.GetTestResultFolder()+ @"SpecFlowResults/");
             htmlReporter.Config.ReportName = "Automation UI testing Report";
             htmlReporter.Config.DocumentTitle = "Automation Status Report";
             htmlReporter.Config.Theme = Theme.Standard;

@@ -5,6 +5,7 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Remote;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Framework.Selenium
 
         public static IWebDriver Build(string browserName, string type)
         {
-            FW.Log.Info($"Browser: {browserName}");
+            Log.Information($"Browser: {browserName}");
 
             if (type.ToLower() == "local")
             {
@@ -47,7 +48,7 @@ namespace Framework.Selenium
 
         public static ChromeOptions AddChromeOptions()
         {
-            FW.Log.Info("Launching google chrome with new profile..");
+            Log.Information("Launching google chrome with new profile..");
             chrome_options.AddArguments("--disable-extensions");
             chrome_options.AddArguments("--disable-notifications");
             //options.AddUserProfilePreference("download.default_directory", _autoUtils.GetRepoDownloadFolder());
@@ -65,7 +66,7 @@ namespace Framework.Selenium
 
         public static EdgeOptions AddEdgeOptions()
         {
-            FW.Log.Info("Launching google chrome with new profile..");
+            Log.Information("Launching google chrome with new profile..");
             edge_options.AddArguments("--disable-extensions");
             edge_options.AddArguments("--disable-notifications");
             //options.AddUserProfilePreference("download.default_directory", _autoUtils.GetRepoDownloadFolder());

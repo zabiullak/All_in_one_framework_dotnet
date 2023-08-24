@@ -2,3 +2,6 @@
 2. Learn Docker and why we need it and implement it
 3. what is Selenium grid ?
 4. shall I combine PlayWright project in this?
+
+
+dotnet test C:\Users\Mohamad.Khaja\Desktop\Learing\GitHub\Web_UI_Automation_Dotnet\BDD_with_Specflow\BDD_with_Specflow.csproj --filter:"TestCategory=Login"
