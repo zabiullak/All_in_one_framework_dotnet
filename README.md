@@ -1,16 +1,16 @@
-# UI Automation using Selenium with C#.Net and Playwright tool
-# API Automation using RestSharp
-# Mocking and Stubbing using WireMock.Net
+## List of Projects: 
+### 1. UI Automation using Selenium with C#.Net and Playwright tool
+### 2. API Automation using RestSharp
+### 3. Mocking and Stubbing using WireMock.Net
 
-**List of libraries used in this repo:**
-
-1. Nunit
-2. Selenium.WebDriver
-3. Playwright
-4. SpecFlow.NET
-5. RestSharp
-6. ExtentReport
-7. SeriLog
+> #### List of Libraries used in this repo:
+> 1. Nunit
+> 2. Selenium.WebDriver
+> 3. Playwright
+> 4. SpecFlow.NET
+> 5. RestSharp
+> 6. ExtentReport
+> 7. SeriLog
 
 **This repo supports the following:**
 
