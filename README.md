@@ -21,7 +21,8 @@
 3. Proper log message to debug the failures.
 4. Extent HTML report to view BDD - Specflow Scenario results.
 
-_Additional Info:_ 
 
-1. for Parallel Execution of Nunit tests add [Parallelizable] tag to the respective tests and trigger via cmd / using IDE
-2. The proper POM is followed and #CleanCode is taken care
+**Steps to Run Test cases:**
+
+1. Open the cloned repo, Navigate to the dialog box: Test -> Configure Run Settings -> add/select the _.runsetting_ file
+2. Go to Test Explorer. Select any test cases to run.  
