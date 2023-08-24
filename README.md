@@ -5,9 +5,10 @@ List of libraries used in this repo:
 1. Nunit
 2. Selenium.WebDriver
 3. Playwright
-4. RestSharp
-5. ExtentReport
-6. SeriLog
+4. SpecFlow.NET
+5. RestSharp
+6. ExtentReport
+7. SeriLog
 
 This repo supports the following:
 
