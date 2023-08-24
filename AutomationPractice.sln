@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI_Automation_Selenium", "UI_Automation_Nunit\UI_Automation_Selenium.csproj", "{636E9094-361A-4ADC-A172-554CAECF7AAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI_Automation_Selenium", "UI_Automation_Selenium\UI_Automation_Selenium.csproj", "{636E9094-361A-4ADC-A172-554CAECF7AAE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Pages", "Application.Pages\Application.Pages.csproj", "{2BB3AB04-48F9-4C6A-AA3D-35257F0C5888}"
 EndProject
@@ -18,7 +18,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BDD_with_Specflow", "BDD_wi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WireMockTool_Practice", "WireMockTool_Practice\WireMockTool_Practice.csproj", "{62670CBC-0E33-40AC-AECC-273299243E09}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Automation_RestSharp", "API_Automation_NUnitTests\API_Automation_RestSharp.csproj", "{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Automation_RestSharp", "API_Automation_RestSharp\API_Automation_RestSharp.csproj", "{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Automation_Playwright", "UI_Automation_Playwright\UI_Automation_Playwright.csproj", "{EB527D29-C18D-4F0C-9208-6806D4ABBFD2}"
 EndProject
