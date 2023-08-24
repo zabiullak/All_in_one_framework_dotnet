@@ -1,4 +1,5 @@
 ﻿using BoDi;
+using Framework.Utils;
 using Microsoft.Playwright;
 using System;
 using System.Collections.Generic;
@@ -50,7 +51,8 @@ namespace UI_Automation_Playwright.Hooks
         {
             var date = DateTime.UtcNow.ToString("yyyy-MM-dd_HH-mm-ss");
             var title = await page.TitleAsync();
-            var path = $"../../../screenshots/{date}_{title}-.png";
+            //var path = $"../../../screenshots/{date}_{title}-.png";
+            var path = FolderUtils.GetTestResultFolder() + $"{Helper.GetDateValue(0).ToString("d_MM_yyyy")}/{title}-.png";
             var so = new PageScreenshotOptions()
             {
                 Path = path,
