@@ -1,5 +1,4 @@
-# UI Automation using Selenium with C#.Net
-# UI Automation using Playwright tool
+# UI Automation using Selenium with C#.Net and Playwright tool
 # API Automation using RestSharp
 # Mocking and Stubbing using WireMock.Net
 
