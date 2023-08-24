@@ -45,11 +45,11 @@ steps:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
       **\bin\**\*BDD_with_Specflow.dll
-      **\bin\**\*UI_Automation_NUnitTests.dll
-      **\bin\**\*API_Automation_NUnitTests.dll
+      **\bin\**\*UI_Automation_Selenium.dll
+      **\bin\**\*UI_Automation_Playwright.dll
+      **\bin\**\*API_Automation_RestSharp.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    testFiltercriteria: 'TestCategory=Login'
     uiTests: true
     runSettingsFile: 'Settings.runsettings'
     overrideTestrunParameters: '-Password $(PASSWORD) -UserName $(USERNAME)'
