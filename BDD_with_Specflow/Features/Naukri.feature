@@ -2,7 +2,7 @@
 
 	Uploade Resume in Naukri profile
 
-@Login
+@Login @specflow
 Scenario: Valid User able to Login successfully
 	Given Login to Naukri profile with valid creds
 	Then  Validate Title of the Page

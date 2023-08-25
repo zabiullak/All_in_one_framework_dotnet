@@ -12,8 +12,9 @@ namespace UI_Automation_Selenium.Tests.Naukri.com
     [TestFixture]
     internal class NaukriTests : TestBase
     {
-        [TestCase(Category ="Login")]
-        [Parallelizable]
+        [Test]
+        [Category("NunitTests")]
+        [Category("Login")]
         public void LoginNaukriDotCom()
         {
             string title = Pages.NavigateToNaukri().LoginWithValidCreds().GetTheTitleOfThePage();
@@ -21,8 +22,8 @@ namespace UI_Automation_Selenium.Tests.Naukri.com
             Assert.That(title, Is.EqualTo("Home | Mynaukri"), "User not landed on Home Page");
         }
 
-        [TestCase(Category = "ResumeUpload")]
-        [Parallelizable]
+        [Test]
+        [Category("ResumeUpload")]
         public void UploadUpdatedResume()
         {
             LoginNaukriDotCom();

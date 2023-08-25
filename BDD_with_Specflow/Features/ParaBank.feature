@@ -2,7 +2,7 @@
 
 A short summary of the feature
 
-@tag1
+@parabank @specflow
 Scenario: Validate user able to login succussfully
 	Given Navigate to Url 'https://parabank.parasoft.com/'
 	When Enter User Name as 'pintu'
