@@ -38,7 +38,8 @@ namespace UI_Automation_Selenium.Base
             }
             else if (outcome == TestStatus.Failed)
             {
-                Driver.TakeScreenShot("test_Failed");
+                string fileLocation = Driver.TakeScreenShot("test_Failed");
+                TestContext.AddTestAttachment(Path.GetFullPath(fileLocation), "ScreenShot");
                 Log.Information("Outcome: Failed");
             }
             else

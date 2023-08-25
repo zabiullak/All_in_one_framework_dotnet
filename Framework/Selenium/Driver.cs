@@ -121,11 +121,13 @@ namespace Framework.Selenium
             }
         }
 
-        public static void TakeScreenShot(string imageName)
+        public static string TakeScreenShot(string imageName)
         {
             var ss = ((ITakesScreenshot)Current).GetScreenshot();
             var ssFileName = Path.Combine(FW.CurrentTestDirectory.FullName, imageName);
-            ss.SaveAsFile($"{ssFileName}.png", ScreenshotImageFormat.Png);
+            string screenShotLocation = $"{ssFileName}.png";
+            ss.SaveAsFile(screenShotLocation, ScreenshotImageFormat.Png);
+            return screenShotLocation;
         }
 
         public static void Quit()
