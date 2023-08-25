@@ -49,6 +49,7 @@ steps:
       **\bin\**\*API_Automation_RestSharp.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    testFiltercriteria: 'TestCategory=NunitTests|TestCategory=specflow'
     uiTests: true
     runSettingsFile: 'Settings.runsettings'
     overrideTestrunParameters: '-Password $(PASSWORD) -UserName $(USERNAME)'
