@@ -3,3 +3,6 @@ dotnet tool install --global PowerShell
 
 // to download chromium, firfox, edge., 
 pwsh bin/Debug/net6.0/playwright.ps1 install
+
+// to download specif browser like chromium 
+pwsh bin/Debug/net6.0/playwright.ps1 install chromium 
