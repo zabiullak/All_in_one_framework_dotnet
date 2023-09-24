@@ -5,3 +5,5 @@
 
 
 dotnet test C:\Users\Mohamad.Khaja\Desktop\Learing\GitHub\Web_UI_Automation_Dotnet\BDD_with_Specflow\BDD_with_Specflow.csproj --filter:"TestCategory=Login"
+
+TestCategory=smoke|(TestCategory=e2e&TestCategory=p1)

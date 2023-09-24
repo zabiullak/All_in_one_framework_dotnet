@@ -27,9 +27,9 @@ namespace UI_Automation_Selenium.Tests.Naukri.com
         public void UploadUpdatedResume()
         {
             LoginNaukriDotCom();
-            string fileName = Pages.HomePage.ClickOnViewProfile().UploadNewFileAs("MohamadZabiulla_SDET_CSharp.pdf").GetTheUploadedFileName();
+            string fileName = Pages.HomePage.ClickOnViewProfile().UploadNewFileAs("Resume.pdf").GetTheUploadedFileName();
 
-            Assert.That(fileName, Is.EqualTo("MohamadZabiulla_SDET_CSharp.pdf"), "File was not updated successfully");
+            Assert.That(fileName, Is.EqualTo("Resume.pdf"), "File was not updated successfully");
         }
     }
 }
