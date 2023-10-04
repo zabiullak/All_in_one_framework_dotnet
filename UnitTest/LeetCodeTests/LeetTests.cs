@@ -408,26 +408,73 @@ namespace UnitTests.LeetCodeTests
         }
 
         [Test]
-        public void test()
+        public void ArrayReverse()
         {
+            string[] input = { "India", "is", "Bharath" };
+            string[] output = { "Bharath", "is", "India" };
+            Assert.That(Code.ReverseArray(input), Is.EqualTo(output));
+        }
 
+        [Test]
+        public void ReverseWords()
+        {
+            string input = "india is bharath";
+            string output = "bharath is india";
+            Assert.That(Code.ReverseWords(input),Is.EqualTo(output));
+        }
+
+        [Test]
+        public void PrimeNumber()
+        {
+            int input1 = 3;
+            int input2 = 4;
+            int input3 = 19;
+            Assert.That(Code.IsPrime(input1), Is.True);
+            Assert.That(Code.IsPrime(input2), Is.False);
+            Assert.That(Code.IsPrime(input3), Is.True);
+        }
+
+        [Test]
+        public void MaxAndMinNumberFromAnArray()
+        {
+            int[] input = { 5, 1, 4, 56, 6 };
+
+            Assert.That(Code.FindMaxFromArray(input), Is.EqualTo(56));
+            Assert.That(Code.FindMinFromArray(input), Is.EqualTo(1));
+        }
+
+        [Test]
+        public void FindSecondeMaxAndMinNumberFromAnArray()
+        {
+            int[] input = { 5, 1, 4, 56, 6 };
+
+            Assert.That(Code.FindSecondMaxFromArray(input), Is.EqualTo(6));
+            Assert.That(Code.FindSecondMinFromArray(input), Is.EqualTo(4));
+        }
+
+        [Test]
+        public void StringPalindrome()
+        {
+            string input = "abcba";
+            string input1 = "abcbb";
+            Assert.That(Code.IsStringPalindrome(input), Is.True);
+            Assert.That(Code.IsStringPalindrome(input1), Is.False);
+        }
+
+        [Test]
+        public void NumberPalindrome()
+        {
+            int input =12121;
+            int input1 =12122;
+            Assert.That(Code.IsDigitPalindrome(input), Is.True);
+            Assert.That(Code.IsDigitPalindrome(input1), Is.False);
         }
 
         //[Test]
         //public void test()
         //{
-
         //}
-        //[Test]
-        //public void test()
-        //{
 
-        //}
-        //[Test]
-        //public void test()
-        //{
-
-        //}
 
     }
 }

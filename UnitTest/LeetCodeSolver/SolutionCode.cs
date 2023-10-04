@@ -1589,5 +1589,98 @@ namespace UnitTests.LeetCodeSolver
             return result;
         }
 
+        internal string[] ReverseArray(string[] input)
+        {
+            int p1 = 0;
+            int p2 = input.Length - 1;
+
+            while(p1 < p2 )
+            {
+                string temp = input[p1];
+                input[p1++] = input[p2];
+                input[p2--] = temp;
+            }
+            return input;
+        }
+
+        internal string ReverseWords(string input)
+        {
+            //string input = "india is bharath";
+            //string output = "bharth is india";
+            string[] splittedWords = input.Split(" ");
+
+            return string.Join(" ", ReverseArray(splittedWords));
+        }
+
+        internal bool IsPrime(int input)
+        {
+            for(int i = 2; i <= input/2; i++)
+            {
+                if(input % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        internal int FindMaxFromArray(int[] input)
+        {
+            int MaxDigit = input[0];
+            for (int i = 0; i < input.Length - 1; i++)
+            {
+                if(input[i]>MaxDigit)
+                    MaxDigit = input[i];
+            }
+            return MaxDigit;
+        }
+
+        internal int FindMinFromArray(int[] input)
+        {
+            //Array.Sort(input);
+            //return input[0];
+            int MinDigit = input[0];
+            for (int i = 0; i < input.Length - 1; i++)
+            {
+                if (input[i] < MinDigit)
+                    MinDigit = input[i];
+            }
+            return MinDigit;
+        }
+
+        internal int FindSecondMinFromArray(int[] input)
+        {
+            Array.Sort(input);
+            return input[1];
+        }
+
+        internal int FindSecondMaxFromArray(int[] input)
+        {
+            Array.Sort(input);
+            return input[input.Length-2];
+        }
+
+        internal bool IsDigitPalindrome(int input)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal bool IsStringPalindrome(string input)
+        {
+            //string input = "abcba";
+            char[] chars = input.ToCharArray();
+            int p1 = 0;
+            int p2 = input.Length - 1;
+
+            while(p1 < p2)
+            {
+                char temp = chars[p1];
+                chars[p1++] = chars[p2];
+                chars[p2--] = temp;
+
+                if (!chars.IsCharArrayMatched(input.ToCharArray())) return false;
+            }
+            return true;
+        }
     }
 }
