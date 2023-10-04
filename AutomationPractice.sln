@@ -20,7 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WireMockTool_Practice", "Wi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Automation_RestSharp", "API_Automation_RestSharp\API_Automation_RestSharp.csproj", "{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Automation_Playwright", "UI_Automation_Playwright\UI_Automation_Playwright.csproj", "{EB527D29-C18D-4F0C-9208-6806D4ABBFD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI_Automation_Playwright", "UI_Automation_Playwright\UI_Automation_Playwright.csproj", "{EB527D29-C18D-4F0C-9208-6806D4ABBFD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTest\UnitTests.csproj", "{007F0E08-1816-4A7C-9755-75B0BE2FD611}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{EB527D29-C18D-4F0C-9208-6806D4ABBFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB527D29-C18D-4F0C-9208-6806D4ABBFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB527D29-C18D-4F0C-9208-6806D4ABBFD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007F0E08-1816-4A7C-9755-75B0BE2FD611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007F0E08-1816-4A7C-9755-75B0BE2FD611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007F0E08-1816-4A7C-9755-75B0BE2FD611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007F0E08-1816-4A7C-9755-75B0BE2FD611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
