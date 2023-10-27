@@ -7,6 +7,7 @@ using UnitTests.LeetCodeSolver;
 
 namespace UnitTests.LeetCodeTests
 {
+    [Category("LeetCode")]
     public class LeetTests
     {
         SolutionCode Code;
