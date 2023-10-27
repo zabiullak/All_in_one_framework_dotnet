@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/zabiullaedu/SeleniumOrPlaywright_with_csharp/_apis/build/status%2Fzabiullak.All_in_one_framework_dotnet?branchName=master)](https://dev.azure.com/zabiullaedu/SeleniumOrPlaywright_with_csharp/_build/latest?definitionId=9&branchName=master)
+
 ## List of Projects: 
 #### - UI Automation using Selenium with C#.Net and Playwright tool
 #### - API Automation using RestSharp
