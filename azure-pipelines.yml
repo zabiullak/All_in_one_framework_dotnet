@@ -18,9 +18,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'TASKKILL /fi "IMAGENAME eq chromedr*" /f /t'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
+
 - task: NuGetToolInstaller@1
   inputs:
     versionSpec: '6.6.1'
@@ -49,9 +47,10 @@ steps:
       **\bin\**\*BDD_with_Specflow.dll
       **\bin\**\*UI_Automation_Selenium.dll
       **\bin\**\*API_Automation_RestSharp.dll
+      **\bin\**\*UnitTests.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    testFiltercriteria: 'TestCategory=LeetCode|TestCategory=specflow'
+    testFiltercriteria: 'TestCategory=LeetCode'
     uiTests: true
     runSettingsFile: 'Settings.runsettings'
     overrideTestrunParameters: '-Password $(PASSWORD) -UserName $(USERNAME)'
