@@ -7,55 +7,55 @@
 #- master
 
 #pool:
-#  vmImage: 'windows-latest'
+#  vmimage: 'windows-latest'
 
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+#variables:
+#  solution: '**/*.sln'
+#  buildPlatform: 'Any CPU'
+#  buildConfiguration: 'Release'
 
-steps:
-- task: CmdLine@2
-  inputs:
-    script: 'TASKKILL /fi "IMAGENAME eq chromedr*" /f /t'
+#steps:
+#- task: CmdLine@2
+#  inputs:
+#    script: 'TASKKILL /fi "IMAGENAME eq chromedr*" /f /t'
 
-- task: NuGetToolInstaller@1
-  inputs:
-    versionSpec: '6.6.1'
+#- task: NuGetToolInstaller@1
+#  inputs:
+#    versionSpec: '6.6.1'
 
-- task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
-    feedsToUse: 'select'
-- task: VSBuild@1
-  inputs:
-    solution: 'AutomationPractice.sln'
-    vsVersion: '17.0'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    clean: true
+#- task: NuGetCommand@2
+#  inputs:
+#    command: 'restore'
+#    restoreSolution: '**/*.sln'
+#    feedsToUse: 'select'
+#- task: VSBuild@1
+#  inputs:
+#    solution: 'AutomationPractice.sln'
+#    vsVersion: '17.0'
+#    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
+#    clean: true
 
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\bin\**\*BDD_with_Specflow.dll
-      **\bin\**\*UI_Automation_Selenium.dll
-      **\bin\**\*API_Automation_RestSharp.dll
-      **\bin\**\*UnitTests.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    testFiltercriteria: 'TestCategory=LeetCode'
-    uiTests: true
-    runSettingsFile: 'Settings.runsettings'
-    overrideTestrunParameters: '-Password $(PASSWORD) -UserName $(USERNAME)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+#- task: VSTest@2
+#  inputs:
+#    testSelector: 'testAssemblies'
+#    testAssemblyVer2: |
+#      **\bin\**\*BDD_with_Specflow.dll
+#      **\bin\**\*UI_Automation_Selenium.dll
+#      **\bin\**\*API_Automation_RestSharp.dll
+#      **\bin\**\*UnitTests.dll
+#      !**\obj\**
+#    searchFolder: '$(System.DefaultWorkingDirectory)'
+#    testFiltercriteria: 'TestCategory=LeetCode'
+#    uiTests: true
+#    runSettingsFile: 'Settings.runsettings'
+#    overrideTestrunParameters: '-Password $(PASSWORD) -UserName $(USERNAME)'
+#    platform: '$(buildPlatform)'
+#    configuration: '$(buildConfiguration)'
 
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: 'TestResults'
-    artifact: 'ExtentResultsAndLogs'
-    publishLocation: 'pipeline'
+#- task: PublishPipelineArtifact@1
+#  inputs:
+#    targetPath: 'TestResults'
+#    artifact: 'ExtentResultsAndLogs'
+#    publishLocation: 'pipeline'
