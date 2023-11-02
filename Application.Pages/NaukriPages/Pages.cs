@@ -10,14 +10,13 @@ using System.Threading.Tasks;
 using Application.Pages.ParaBank;
 using Serilog;
 
-namespace Application.Pages
+namespace Application.Pages.NaukriPages
 {
     public class Pages
     {
         [ThreadStatic] public static LoginPage LoginPage;
         [ThreadStatic] public static HomePage HomePage;
         [ThreadStatic] public static ProfilePage ProfilePage;
-        [ThreadStatic] public static IndexPage IndexPage;
 
         public static void Init()
         {
@@ -25,7 +24,6 @@ namespace Application.Pages
             LoginPage = new LoginPage();
             HomePage = new HomePage();
             ProfilePage = new ProfilePage();
-            IndexPage = new IndexPage();
         }
 
         public static LoginPage NavigateToNaukri()

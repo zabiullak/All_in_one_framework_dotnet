@@ -1,4 +1,5 @@
 ﻿using Application.Pages;
+using Application.Pages.NaukriPages;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
