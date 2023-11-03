@@ -64,7 +64,9 @@ namespace BDD_with_Specflow.Hooks
         {
             Log.Information($"Running before scenario...{scenarioContext.ScenarioInfo.Title}");
             Driver.Init();
-            Pages.Init();
+            Application.Pages.EbayPages.Pages.Init();
+            Application.Pages.NaukriPages.Pages.Init();
+            Application.Pages.ParaBank.Pages.Init();
 
             _container.RegisterInstanceAs<IWebDriver>(Driver.Current);
 

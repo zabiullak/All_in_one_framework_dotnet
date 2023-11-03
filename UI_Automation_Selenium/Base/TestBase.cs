@@ -24,7 +24,9 @@ namespace UI_Automation_Selenium.Base
         {
             FW.SetLogger();
             Driver.Init();
-            Pages.Init();
+            Application.Pages.EbayPages.Pages.Init();
+            Application.Pages.NaukriPages.Pages.Init();
+            Application.Pages.ParaBank.Pages.Init();
         }
 
         [TearDown]
