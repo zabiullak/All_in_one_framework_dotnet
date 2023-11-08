@@ -46,7 +46,7 @@ namespace BDD_with_Specflow.Hooks
             ExtentReportTearDown();
         }
 
-        [BeforeFeature]
+        [BeforeFeature(Order =0)]
         public static void BeforeFeature(FeatureContext featureContext)
         {
             Log.Information($"Running before feature...{featureContext.FeatureInfo.Title}");
@@ -67,6 +67,7 @@ namespace BDD_with_Specflow.Hooks
             Application.Pages.EbayPages.Pages.Init();
             Application.Pages.NaukriPages.Pages.Init();
             Application.Pages.ParaBank.Pages.Init();
+            Application.Pages.BookStorePages.Pages.Init();
 
             _container.RegisterInstanceAs<IWebDriver>(Driver.Current);
 
