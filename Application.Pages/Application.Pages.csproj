@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!--<PackageReference Include="IKVM" Version="8.6.2" />-->
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj" />
   </ItemGroup>
 
