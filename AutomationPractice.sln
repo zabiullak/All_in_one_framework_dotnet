@@ -14,23 +14,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework", "Framework\Framework.csproj", "{E46D3418-EAC8-4A04-8C89-3865EA01B1B3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BDD_with_Specflow", "BDD_with_Specflow\BDD_with_Specflow.csproj", "{33994620-EFCE-4849-9DEE-BC51880FB9B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumSpecFlow_BDD", "BDD_with_Specflow\SeleniumSpecFlow_BDD.csproj", "{33994620-EFCE-4849-9DEE-BC51880FB9B8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WireMockTool_Practice", "WireMockTool_Practice\WireMockTool_Practice.csproj", "{62670CBC-0E33-40AC-AECC-273299243E09}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Automation_RestSharp", "API_Automation_RestSharp\API_Automation_RestSharp.csproj", "{ADF96F1E-D38B-4E86-9AD0-CCCC878C3B7C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI_Automation_Playwright", "UI_Automation_Playwright\UI_Automation_Playwright.csproj", "{EB527D29-C18D-4F0C-9208-6806D4ABBFD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaywrightSpecflowPOM_BDD", "UI_Automation_Playwright\PlaywrightSpecflowPOM_BDD.csproj", "{EB527D29-C18D-4F0C-9208-6806D4ABBFD2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTest\UnitTests.csproj", "{007F0E08-1816-4A7C-9755-75B0BE2FD611}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_BookStore", "_BookStore\_BookStore.csproj", "{59FA3A70-CC81-4B1E-BC10-C7159036E3EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_BookStore.DataAccess", "_BookStore.DataAccess\_BookStore.DataAccess.csproj", "{2762B9CE-4CCC-4538-AA21-5EAF172CFD35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_BookStore.DataAccess", "_BookStore.DataAccess\_BookStore.DataAccess.csproj", "{2762B9CE-4CCC-4538-AA21-5EAF172CFD35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_BookStore.Model", "_BookStore.Model\_BookStore.Model.csproj", "{0A70D2BF-0A57-4B7A-87FA-2BDE814F4B1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_BookStore.Model", "_BookStore.Model\_BookStore.Model.csproj", "{0A70D2BF-0A57-4B7A-87FA-2BDE814F4B1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_BookStore.Utility", "_BookStore.Utility\_BookStore.Utility.csproj", "{C3338158-8909-49F7-B7C8-249FC5C26B4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_BookStore.Utility", "_BookStore.Utility\_BookStore.Utility.csproj", "{C3338158-8909-49F7-B7C8-249FC5C26B4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

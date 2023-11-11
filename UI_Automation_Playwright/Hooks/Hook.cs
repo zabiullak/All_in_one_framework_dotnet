@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
-namespace UI_Automation_Playwright.Hooks
+namespace PlaywrightSpecflowPOM_BDD.Hooks
 {
     [Binding]
     public sealed class Hook
