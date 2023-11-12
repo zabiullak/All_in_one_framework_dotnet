@@ -82,7 +82,8 @@ namespace SeleniumSpecflowPOM_BDD.Hooks
 
             if (driver != null)
             {
-                driver.Quit();
+                if (TestContext.Parameters["CloseDriverInstance"] == "true")
+                    driver.Quit();
             }
 
             // Finally, once just before the application exits...

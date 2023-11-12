@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 namespace SeleniumSpecflowPOM_BDD.Hooks
 {
     [Binding]
-    public class TestBase : Hook
+    public class TestBase 
     {
         private static Process cmd;
 
-        public TestBase(IObjectContainer container) : base(container)
-        {
-        }
+        //public TestBase(IObjectContainer container)
+        //{
+        //}
 
         [BeforeFeature("BookStoreApp")]
         public static void Before_BookStoreApp()

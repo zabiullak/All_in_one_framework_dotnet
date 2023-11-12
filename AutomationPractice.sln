@@ -28,9 +28,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_BookStore.Model", "_BookSt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_BookStore.Utility", "_BookStore.Utility\_BookStore.Utility.csproj", "{C3338158-8909-49F7-B7C8-249FC5C26B4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaywrightSpecflowPOM_BDD", "PlaywrightSpecflowPOM_BDD\PlaywrightSpecflowPOM_BDD.csproj", "{27122D5C-3916-4C1C-B1D6-F2C9216130AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaywrightSpecflowPOM_BDD", "PlaywrightSpecflowPOM_BDD\PlaywrightSpecflowPOM_BDD.csproj", "{27122D5C-3916-4C1C-B1D6-F2C9216130AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumSpecflowPOM_BDD", "SeleniumSpecflowPOM_BDD\SeleniumSpecflowPOM_BDD.csproj", "{00DC047A-54A3-41D0-A6EB-143E1F677026}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumSpecflowPOM_BDD", "SeleniumSpecflowPOM_BDD\SeleniumSpecflowPOM_BDD.csproj", "{00DC047A-54A3-41D0-A6EB-143E1F677026}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

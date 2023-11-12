@@ -13,6 +13,7 @@
 		<Parameter name="type" value="local" />
 		<!--<Parameter name="type" value="remote" />-->
 		<Parameter name="headless" value="false" />
+		<Parameter name="CloseDriverInstance" value="true" />
 		<Parameter name="waitSecond" value="30" />
 		<Parameter name="HighlightElements" value="true" />
 		
