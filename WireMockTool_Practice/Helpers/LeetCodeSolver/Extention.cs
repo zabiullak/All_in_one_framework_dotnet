@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitTests.LeetCodeSolver
+namespace  WireMockTool_Practice.LeetCodeSolver
 {
     public static class Extention
     {

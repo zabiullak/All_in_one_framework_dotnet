@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace UnitTests.LeetCodeSolver
+namespace  WireMockTool_Practice.LeetCodeSolver
 {
     public class SolutionCode
     {

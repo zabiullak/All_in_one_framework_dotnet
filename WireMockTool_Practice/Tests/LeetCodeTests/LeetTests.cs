@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UnitTests.LeetCodeSolver;
+using  WireMockTool_Practice.LeetCodeSolver;
 
-namespace UnitTests.LeetCodeTests
+namespace  WireMockTool_Practice.Tests.LeetCodeTests
 {
     [Category("LeetCode")]
     public class LeetTests
