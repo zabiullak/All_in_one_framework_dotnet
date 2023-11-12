@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BDD_with_Specflow.Hooks
+namespace SeleniumSpecflowPOM_BDD.Hooks
 {
     [Binding]
     public class TestBase : Hook

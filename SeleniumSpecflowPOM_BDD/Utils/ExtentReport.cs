@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
-namespace BDD_with_Specflow.Utils
+namespace SeleniumSpecflowPOM_BDD.Utils
 {
     public abstract class ExtentReport
     {
