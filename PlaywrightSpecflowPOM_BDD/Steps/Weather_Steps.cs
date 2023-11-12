@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
-namespace UI_Automation_Playwright.Steps
+namespace PlaywrightSpecflowPOM_BDD.Steps
 {
     [Binding]
     public sealed class Weather_Steps

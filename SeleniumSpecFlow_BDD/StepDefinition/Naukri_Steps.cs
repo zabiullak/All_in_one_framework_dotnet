@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
-namespace BDD_with_Specflow.StepDefinition
+namespace SeleniumSpecFlow_BDD.StepDefinition
 {
     [Binding]
     public sealed class Naukri_Steps

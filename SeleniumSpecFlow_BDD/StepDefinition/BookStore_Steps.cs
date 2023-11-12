@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BDD_with_Specflow.StepDefinition
+namespace SeleniumSpecFlow_BDD.StepDefinition
 {
     [Binding]
     public class BookStore_Steps

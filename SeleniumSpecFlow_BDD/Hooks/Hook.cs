@@ -1,7 +1,7 @@
 ﻿using Application.Pages;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
-using BDD_with_Specflow.Utils;
+using SeleniumSpecFlow_BDD.Utils;
 using BoDi;
 using Framework;
 using Framework.Selenium;
@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 
-namespace BDD_with_Specflow.Hooks
+namespace SeleniumSpecFlow_BDD.Hooks
 {
     [Binding]
     public class Hook : ExtentReport
